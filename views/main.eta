@@ -1,0 +1,13 @@
+<% layout("./layouts/layout.eta") %>
+
+<h1>Welcome to the best question manager in the universe!</h1>
+
+<p>
+This web application allows registered users to create their own multiple choice questions.
+Want to test your knowledge? You can take quizzes that include questions from any registered user.
+Users can also see general statistics and see how well they fare against others. Knowledge is power!
+</p>
+
+<p> Already registered? <a href="/auth/login"> Login here </a> </p>
+<p> Not registered? <a href="/auth/register"> Register here </a> </p>
+

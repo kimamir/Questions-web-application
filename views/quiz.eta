@@ -1,0 +1,27 @@
+<% layout("./layouts/layout.eta") %>
+
+
+<h1>Quiz Time!</h1>
+
+<% if (it.validationErrors) { %>
+<h2>
+    There are currently no questions stored in the database!
+</h2>
+<% } %>
+
+<% if (it.question) { %>
+    <h2> <%= it.question.question_text %> </h2>
+<% } %>
+
+<% if (it.options ) { %>
+<ul>
+    <% it.options.forEach(option => { %>
+  <li> 
+        <%= option.option_text %>
+        <form method="POST" action="/questions/<%= option.question_id %>/options/<%= option.id %>">
+        <input type="submit" value="Choose" />
+        </form>
+  </li>
+  <% }); %>
+</ul>
+<% } %>
